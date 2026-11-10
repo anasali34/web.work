@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ku" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b12">
+<title>WORKDAY PRO | کار بە شێوەیەکی زیرەکانە</title>
+<style>
+:root{--bg:#070a10;--panel:#101722;--panel2:#141e2c;--gold:#e8bd62;--gold2:#ffe3a0;--muted:#a6b0c0;--line:#2b3441;--white:#f7f5ef}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:Tahoma,Arial,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 85% 4%,#72501d35,transparent 33%),radial-gradient(ellipse at 10% 40%,#183d6340,transparent 35%);z-index:-1}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,calc(100% - 36px));margin:auto}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid #ffffff12}
+.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:1px}
+.logo{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:linear-gradient(145deg,#ffdf91,#a86b1d 55%,#53350f);color:#17110a;font-weight:1000;font-size:17px;box-shadow:0 0 28px #d49b3d44,inset 0 1px 1px #fff9;border:1px solid #ffe3a077;position:relative}
+.logo:after{content:"";position:absolute;inset:5px;border:1px solid #53350f80;border-radius:11px}
+.brand small{display:block;color:var(--gold);font-size:9px;letter-spacing:3px;margin-top:4px}
+.nav{display:flex;gap:25px;color:#c3cad5;font-size:13px}
+.nav a:hover{color:var(--gold)}
+.lang{border:1px solid #4b402d;border-radius:30px;padding:9px 14px;color:var(--gold);font-size:12px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:46px;align-items:center;padding:74px 0 64px}
+.kicker{display:inline-flex;gap:9px;align-items:center;border:1px solid #735a2c;border-radius:30px;padding:8px 14px;color:var(--gold2);font-size:12px;background:#d6a64b0c}
+.dot{width:7px;height:7px;background:var(--gold);border-radius:50%;box-shadow:0 0 12px var(--gold)}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.06;direction:ltr;text-align:right;margin:23px 0 16px;letter-spacing:-2px}
+h1 span{background:linear-gradient(100deg,#fff4d3,#d9a84d 55%,#fff0c3);background-clip:text;color:transparent}
+.lead{font-size:17px;line-height:2.1;color:#c0c8d4;max-width:600px}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:13px;padding:15px 22px;font-weight:800;font-size:14px;transition:.2s}
+.btn-gold{background:linear-gradient(110deg,#f5d58e,#bd8734);color:#17120a;box-shadow:0 10px 32px #d49b3d30}
+.btn-gold:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.btn-outline{border:1px solid #596171;color:#e5e9ef;background:#ffffff06}
+.micro{font-size:11px;color:#8f9aaa;margin-top:16px}
+.mock-area{position:relative;min-height:440px;display:grid;place-items:center}
+.glow{position:absolute;width:320px;height:320px;border-radius:50%;background:#b17c2a30;filter:blur(65px)}
+.phone{position:relative;width:260px;border:1px solid #796039;border-radius:34px;padding:12px;background:linear-gradient(145deg,#202a38,#090e17);box-shadow:0 35px 90px #000b,0 0 45px #c08c3a20;transform:rotate(-5deg)}
+.screen{border-radius:25px;background:linear-gradient(160deg,#101c2b,#080e18);padding:17px;min-height:390px;border:1px solid #ffffff12}
+.screen-head{display:flex;justify-content:space-between;align-items:center;font-size:10px;color:#bfc9d8}
+.mini-logo{width:29px;height:29px;border-radius:9px;background:linear-gradient(140deg,#ffe4a2,#a86b1d);color:#17110a;display:grid;place-items:center;font-size:10px;font-weight:900}
+.balance{margin-top:22px;border:1px solid #6b532c;border-radius:17px;padding:16px;background:linear-gradient(135deg,#302719,#111a25)}
+.balance small{color:#d9bd80;font-size:10px}
+.balance strong{display:block;font-size:25px;margin-top:9px;color:#ffe2a1;direction:ltr;text-align:right}
+.statrow{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:10px}
+.stat{background:#172536;border:1px solid #2a3a4b;border-radius:13px;padding:13px}
+.stat small{display:block;color:#9eacbe;font-size:9px}
+.stat b{display:block;margin-top:7px;font-size:16px;color:#f4d38f}
+.task{margin-top:17px;color:#dce3ed;font-size:11px}
+.taskline{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid #ffffff12;color:#b9c4d3;font-size:10px}
+.check{color:#f0c66e}
+.float-card{position:absolute;bottom:38px;right:-3px;background:#131d2b;border:1px solid #6e5731;border-radius:14px;padding:13px 16px;box-shadow:0 15px 35px #0008;font-size:11px;color:#e9d5a9}
+.float-card b{display:block;font-size:15px;color:#ffe3a0;margin-top:5px}
+.trust{border-block:1px solid #ffffff14;padding:21px 0;display:flex;justify-content:center;gap:38px;flex-wrap:wrap;color:#9da8b8;font-size:12px}
+.trust span{display:flex;gap:8px;align-items:center}
+.section{padding:76px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 38px}
+.eyebrow{color:var(--gold);font-size:11px;letter-spacing:2px;font-weight:bold}
+h2{font-size:clamp(27px,4vw,39px);margin:12px 0;color:#fff3d7}
+.section-head p{color:var(--muted);line-height:2;font-size:14px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{padding:24px;border-radius:19px;background:linear-gradient(145deg,#141e2b,#0d131d);border:1px solid #ffffff16;min-height:185px;transition:.2s}
+.card:hover{transform:translateY(-5px);border-color:#9d793e}
+.ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:#d4a34b17;border:1px solid #a77a344d;font-size:21px}
+.card h3{font-size:16px;margin:17px 0 9px;color:#f6dfac}
+.card p{font-size:12px;line-height:2;color:#aeb8c7;margin:0}
+.showcase{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.showcase .card{min-height:150px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;counter-reset:step}
+.step{padding:22px;border:1px solid #ffffff18;border-radius:17px;background:#101925}
+.step:before{counter-increment:step;content:"0" counter(step);font-size:25px;font-weight:900;color:var(--gold)}
+.step h3{font-size:15px;color:#f5dca7}
+.step p{font-size:12px;line-height:1.9;color:#aeb8c7}
+.download-panel{border:1px solid #816538;border-radius:25px;padding:42px 25px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#b7833030,transparent 60%),linear-gradient(145deg,#151e2a,#0a101a);box-shadow:0 25px 70px #0006}
+.download-panel h2{margin-top:0}
+.download-panel p{color:#bac4d1;line-height:2;font-size:13px}
+.download-panel .btn{margin-top:15px;min-width:260px}
+footer{border-top:1px solid #ffffff15;padding:25px 0;color:#8491a3;font-size:11px}
+.footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px;text-align:center}.lead{margin:auto}.hero-actions{justify-content:center}.mock-area{min-height:410px}.nav{display:none}.features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.container{width:min(100% - 26px,1160px)}.features,.showcase,.steps{grid-template-columns:1fr}.hero{gap:18px}.mock-area{min-height:390px}.phone{width:245px}.float-card{right:0;bottom:18px}.trust{gap:16px}.section{padding:55px 0}}
+</style>
+</head>
+<body>
+<header class="container topbar">
+  <a class="brand" href="#">
+    <span class="logo">WP</span>
+    <span>WORKDAY PRO<small>WORK SMARTER EVERY DAY</small></span>
+  </a>
+  <nav class="nav"><a href="#features">تایبەتمەندییەکان</a><a href="#about">دەربارەی ئەپ</a><a href="#download">داگرتن</a></nav>
+  <a class="lang" href="#download">ANDROID APP</a>
+</header>
+
+<main>
+<section class="container hero">
+  <div>
+    <div class="kicker"><i class="dot"></i> سیستەمێکی زیرەک بۆ ڕێکخستنی کارەکانت</div>
+    <h1><span>WORKDAY</span><br>PRO</h1>
+    <p class="lead">هەموو ڕۆژێک بە پلانی ڕوونتر و کۆنترۆڵێکی باشتر دەست پێ بکە. WORKDAY PRO یارمەتیت دەدات کات، ئامادەبوون، مووچە و پارەدانەکانت لە شوێنێکی یەکگرتوودا بەڕێوە ببەیت.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="https://drive.google.com/uc?export=download&id=1HJOIlBxO1oEp4ENMBvopH1MQwHSvHMPo">⬇ داگرتنی ئەپەکە</a>
+      <a class="btn btn-outline" href="#features">بینینی تایبەتمەندییەکان ←</a>
+    </div>
+    <div class="micro">بۆ ئەندرۆید • دابەزاندنی ئاسان • ڕێکخستنی کار بە شێوەیەکی زیرەکانە</div>
+  </div>
+  <div class="mock-area">
+    <div class="glow"></div>
+    <div class="phone">
+      <div class="screen">
+        <div class="screen-head"><span>WORKDAY PRO</span><span class="mini-logo">WP</span></div>
+        <div class="balance"><small>کۆی داهاتی ئەم مانگە</small><strong>$2,450.00</strong></div>
+        <div class="statrow">
+          <div class="stat"><small>ڕۆژانی کار</small><b>24 ڕۆژ</b></div>
+          <div class="stat"><small>ئامادەبوون</small><b>96%</b></div>
+        </div>
+        <div class="task">پوختەی چالاکییەکان</div>
+        <div class="taskline"><span>✓ دەستپێکردنی کار</span><span class="check">ئامادە</span></div>
+        <div class="taskline"><span>◷ پشوودان</span><span>ڕێکخستن</span></div>
+        <div class="taskline"><span>▤ پسوڵە و پارەدان</span><span class="check">بینین</span></div>
+        <div class="taskline"><span>▦ مێژووی کار</span><span>هەموو</span></div>
+      </div>
+    </div>
+    <div class="float-card">ڕێکخستنی کارەکانت<b>هەموو شتێک لە یەک شوێن</b></div>
+  </div>
+</section>
+
+<div class="trust"><span>✦ ڕێکخستنی ڕۆژانە</span><span>✦ بەدواداچوونی مووچە</span><span>✦ مێژوو و ڕاپۆرت</span><span>✦ بەکارهێنانی ئاسان</span></div>
+
+<section class="section container" id="features">
+  <div class="section-head"><div class="eyebrow">POWERFUL FEATURES</div><h2>هەموو پێداویستییەکانی کارت لە یەک ئەپدا</h2><p>لە تۆمارکردنی کاتەوە تا هەژمارکردنی پارە و بینینی مێژووی کار، هەموو شتێک بە ڕێکخراوی لەبەردەستتە.</p></div>
+  <div class="features">
+    <article class="card"><div class="ico">⏱️</div><h3>دەستپێکردن و کۆتاییهێنانی کار</h3><p>کاتی دەستپێکردن و تەواوکردنی کارەکانت تۆمار بکە و ڕۆژەکانی کارت بە وردی بەڕێوە ببە.</p></article>
+    <article class="card"><div class="ico">📅</div><h3>مێژووی ڕۆژانەی کار</h3><p>هەموو ڕۆژەکانت لە شوێنێکی ڕێکخراودا ببینەوە و بە ئاسانی زانیارییەکانت بگەڕێنەوە.</p></article>
+    <article class="card"><div class="ico">💰</div><h3>مووچە و پارەدان</h3><p>داهات، پارەدانی وەرگیراو و کەمکردنەوەکانت تۆمار بکە و باڵانسی خۆت بزانە.</p></article>
+    <article class="card"><div class="ico">🧾</div><h3>دروستکردنی پسوڵە</h3><p>زانیارییەکانی پارەدان و مامەڵەکانت بە شێوەیەکی ڕوون و ڕێکخراو تۆمار بکە.</p></article>
+    <article class="card"><div class="ico">☕</div><h3>پشوودان و ئامادەبوون</h3><p>پشوودانەکان و دۆخی ئامادەبوونت بەدواداچوونیان بۆ بکە و ڕۆژەکەت باشتر ڕێک بخە.</p></article>
+    <article class="card"><div class="ico">📊</div><h3>ڕاپۆرت و هەژمارکردن</h3><p>کۆی ڕۆژانی کار، داهات و پارەی ماوە ببینە و وێنەیەکی ڕوون لە دۆخی کارەکەت هەبێت.</p></article>
+  </div>
+</section>
+
+<section class="section container" id="about">
+  <div class="section-head"><div class="eyebrow">MADE FOR YOUR WORKDAY</div><h2>کارەکانت بە ئاسانی کۆنترۆڵ بکە</h2><p>ڕووکارێکی پاک و مۆدێرن، بەشە جیاوازەکان و زانیارییە ڕێکخراوەکان یارمەتیت دەدەن بە کەمترین هەوڵ کارەکانت بەڕێوە ببەیت.</p></div>
+  <div class="showcase">
+    <article class="card"><div class="ico">🌙</div><h3>ڕووکارێکی شیک و ئارام</h3><p>دیزاینی تاریک بە وردەکارییە زێڕینییەکان، بۆ ئەزموونێکی مۆدێرن و ئاسوودە.</p></article>
+    <article class="card"><div class="ico">🌐</div><h3>زمانی گونجاو</h3><p>بەشەکانی ئەپەکە بە شێوەیەکی ڕوون ڕێکخراون بۆ بەکارهێنانێکی ئاسانتر.</p></article>
+    <article class="card"><div class="ico">🗂️</div><h3>هەموو زانیارییەکانت ڕێکخراو</h3><p>کار، پارەدان، پسوڵە و مێژوو بە شێوەیەکی جیاواز و ئاسان بگەڕێنەوە.</p></article>
+    <article class="card"><div class="ico">⚡</div><h3>خێرا و ئاسان</h3><p>بەشە گرنگەکانت بە ئاسانی بدۆزەرەوە و بێ ئاڵۆزی دەست بە کارەکانت بکە.</p></article>
+  </div>
+</section>
+
+<section class="section container">
+  <div class="section-head"><div class="eyebrow">GET STARTED</div><h2>بە سێ هەنگاو دەست پێ بکە</h2><p>دامەزراندنی ئەپەکە ئاسانە؛ تەنها ئەم هەنگاوانە جێبەجێ بکە.</p></div>
+  <div class="steps">
+    <article class="step"><h3>ئەپەکە دابگرە</h3><p>دوگمەی داگرتن دابگرە و چاوەڕێ بکە تا فایلەکە لە مۆبایلەکەت دابەزێت.</p></article>
+    <article class="step"><h3>دامەزراندن بکە</h3><p>فایلی APK بکەرەوە و ئەگەر مۆبایلەکەت داوای ڕێگەپێدان کرد، بە ئاگایی ڕێگە بدە.</p></article>
+    <article class="step"><h3>دەست بە کار بکە</h3><p>WORKDAY PRO بکەرەوە و زانیارییەکانی کارەکانت بەڕێکخراوی تۆمار بکە.</p></article>
+  </div>
+</section>
+
+<section class="section container" id="download">
+  <div class="download-panel">
+    <div class="eyebrow">YOUR WORK. UNDER CONTROL.</div>
+    <h2>ئامادەیت کارەکانت باشتر ڕێک بخەیت؟</h2>
+    <p>ئێستا WORKDAY PRO دابگرە و بە شێوەیەکی زیرەکانە دەست بە بەڕێوەبردنی ڕۆژانی کارت بکە.</p>
+    <a class="btn btn-gold" href="https://drive.google.com/uc?export=download&id=1HJOIlBxO1oEp4ENMBvopH1MQwHSvHMPo">⬇ داگرتنی WORKDAY PRO</a>
+    <div class="micro">Android APK • Google Drive</div>
+  </div>
+</section>
+</main>
+<footer><div class="container footerin"><a class="brand" href="#"><span class="logo">WP</span><span>WORKDAY PRO<small>WORK SMARTER EVERY DAY</small></span></a><span>© 2026 WORKDAY PRO — هەموو مافەکان پارێزراون</span></div></footer>
+</body>
+</html>
