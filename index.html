@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ku" dir="rtl">
 <head>
@@ -77,96 +78,159 @@ h2{font-size:clamp(27px,4vw,39px);margin:12px 0;color:#fff3d7}
 .download-panel .btn{margin-top:15px;min-width:260px}
 footer{border-top:1px solid #ffffff15;padding:25px 0;color:#8491a3;font-size:11px}
 .footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;align-items:center}
-@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px;text-align:center}.lead{margin:auto}.hero-actions{justify-content:center}.mock-area{min-height:410px}.nav{display:none}.features{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:520px){.container{width:min(100% - 26px,1160px)}.features,.showcase,.steps{grid-template-columns:1fr}.hero{gap:18px}.mock-area{min-height:390px}.phone{width:245px}.float-card{right:0;bottom:18px}.trust{gap:16px}.section{padding:55px 0}}
+.iphone-guide{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.iphone-step{padding:20px;border:1px solid #ffffff18;border-radius:19px;background:linear-gradient(145deg,#141e2b,#0d131d);text-align:center}
+.iphone-step h3{font-size:15px;color:#f5dca7}
+.iphone-step p{font-size:12px;line-height:2;color:#aeb8c7}
+.iphone-picture{height:150px;max-width:125px;margin:15px auto;border:3px solid #aab0ba;border-radius:22px;background:#f5f6f8;color:#172033;padding:12px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 8px 20px #0005}
+.iphone-picture .blue{background:#0879ed;color:white;border-radius:7px;padding:5px;font-size:10px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px;text-align:center}.lead{margin:auto}.hero-actions{justify-content:center}.mock-area{min-height:410px}.nav{display:none}.features{grid-template-columns:repeat(2,1fr)}.iphone-guide{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.container{width:min(100% - 26px,1160px)}.features,.showcase,.steps{grid-template-columns:1fr}.hero{gap:18px}.mock-area{min-height:390px}.phone{width:245px}.float-card{right:0;bottom:18px}.trust{gap:16px}.section{padding:55px 0}.iphone-guide{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 <header class="container topbar">
-  <a class="brand" href="#">
-    <span class="logo">WP</span>
-    <span>WORKDAY PRO<small>WORK SMARTER EVERY DAY</small></span>
-  </a>
-  <nav class="nav"><a href="#features">تایبەتمەندییەکان</a><a href="#about">دەربارەی ئەپ</a><a href="#download">داگرتن</a></nav>
-  <a class="lang" href="#download">ANDROID APP</a>
+<a class="brand" href="#">
+<span class="logo">WP</span>
+<span>WORKDAY PRO<small>WORK SMARTER EVERY DAY</small></span>
+</a>
+<nav class="nav">
+<a href="#features">تایبەتمەندییەکان</a>
+<a href="#about">دەربارەی ئەپ</a>
+<a href="#download">داگرتن</a>
+<a href="#iphone">فێرکاری ئایفۆن</a>
+</nav>
+<a class="lang" href="#download">ANDROID APP</a>
 </header>
-
 <main>
 <section class="container hero">
-  <div>
-    <div class="kicker"><i class="dot"></i> سیستەمێکی زیرەک بۆ ڕێکخستنی کارەکانت</div>
-    <h1><span>WORKDAY</span><br>PRO</h1>
-    <p class="lead">هەموو ڕۆژێک بە پلانی ڕوونتر و کۆنترۆڵێکی باشتر دەست پێ بکە. WORKDAY PRO یارمەتیت دەدات کات، ئامادەبوون، مووچە و پارەدانەکانت لە شوێنێکی یەکگرتوودا بەڕێوە ببەیت.</p>
-    <div class="hero-actions">
-      <a class="btn btn-gold" href="https://drive.google.com/uc?export=download&id=1HJOIlBxO1oEp4ENMBvopH1MQwHSvHMPo">⬇ داگرتنی ئەپەکە</a>
-      <a class="btn btn-outline" href="#features">بینینی تایبەتمەندییەکان ←</a>
-    </div>
-    <div class="micro">بۆ ئەندرۆید • دابەزاندنی ئاسان • ڕێکخستنی کار بە شێوەیەکی زیرەکانە</div>
-  </div>
-  <div class="mock-area">
-    <div class="glow"></div>
-    <div class="phone">
-      <div class="screen">
-        <div class="screen-head"><span>WORKDAY PRO</span><span class="mini-logo">WP</span></div>
-        <div class="balance"><small>کۆی داهاتی ئەم مانگە</small><strong>$2,450.00</strong></div>
-        <div class="statrow">
-          <div class="stat"><small>ڕۆژانی کار</small><b>24 ڕۆژ</b></div>
-          <div class="stat"><small>ئامادەبوون</small><b>96%</b></div>
-        </div>
-        <div class="task">پوختەی چالاکییەکان</div>
-        <div class="taskline"><span>✓ دەستپێکردنی کار</span><span class="check">ئامادە</span></div>
-        <div class="taskline"><span>◷ پشوودان</span><span>ڕێکخستن</span></div>
-        <div class="taskline"><span>▤ پسوڵە و پارەدان</span><span class="check">بینین</span></div>
-        <div class="taskline"><span>▦ مێژووی کار</span><span>هەموو</span></div>
-      </div>
-    </div>
-    <div class="float-card">ڕێکخستنی کارەکانت<b>هەموو شتێک لە یەک شوێن</b></div>
-  </div>
+<div>
+<div class="kicker"><i class="dot"></i> سیستەمێکی زیرەک بۆ ڕێکخستنی کارەکانت</div>
+<h1><span>WORKDAY</span><br>PRO</h1>
+<p class="lead">هەموو ڕۆژێک بە پلانی ڕوونتر و کۆنترۆڵێکی باشتر دەست پێ بکە. WORKDAY PRO یارمەتیت دەدات کات، ئامادەبوون، مووچە و پارەدانەکانت لە شوێنێکی یەکگرتوودا بەڕێوە ببەیت.</p>
+<div class="hero-actions">
+<a class="btn btn-gold" href="https://drive.google.com/uc?export=download&id=1HJOIlBxO1oEp4ENMBvopH1MQwHSvHMPo">⬇ داگرتنی ئەپەکە</a>
+<a class="btn btn-outline" href="https://anasali34.github.io/wordday-pro/" target="_blank" rel="noopener"> کردنەوە بۆ iPhone</a>
+<a class="btn btn-outline" href="#features">بینینی تایبەتمەندییەکان ←</a>
+</div>
+<div class="micro">بۆ ئەندرۆید • بۆ ئایفۆن لە Safari • دابەزاندنی ئاسان • ڕێکخستنی کار بە شێوەیەکی زیرەکانە</div>
+</div>
+<div class="mock-area">
+<div class="glow"></div>
+<div class="phone">
+<div class="screen">
+<div class="screen-head"><span>WORKDAY PRO</span><span class="mini-logo">WP</span></div>
+<div class="balance"><small>کۆی داهاتی ئەم مانگە</small><strong>$2,450.00</strong></div>
+<div class="statrow">
+<div class="stat"><small>ڕۆژانی کار</small><b>24 ڕۆژ</b></div>
+<div class="stat"><small>ئامادەبوون</small><b>96%</b></div>
+</div>
+<div class="task">پوختەی چالاکییەکان</div>
+<div class="taskline"><span>✓ دەستپێکردنی کار</span><span class="check">ئامادە</span></div>
+<div class="taskline"><span>◷ پشوودان</span><span>ڕێکخستن</span></div>
+<div class="taskline"><span>▤ پسوڵە و پارەدان</span><span class="check">بینین</span></div>
+<div class="taskline"><span>▦ مێژووی کار</span><span>هەموو</span></div>
+</div>
+</div>
+<div class="float-card">ڕێکخستنی کارەکانت<b>هەموو شتێک لە یەک شوێن</b></div>
+</div>
 </section>
-
-<div class="trust"><span>✦ ڕێکخستنی ڕۆژانە</span><span>✦ بەدواداچوونی مووچە</span><span>✦ مێژوو و ڕاپۆرت</span><span>✦ بەکارهێنانی ئاسان</span></div>
-
+<div class="trust">
+<span>✦ ڕێکخستنی ڕۆژانە</span>
+<span>✦ بەدواداچوونی مووچە</span>
+<span>✦ مێژوو و ڕاپۆرت</span>
+<span>✦ بەکارهێنانی ئاسان</span>
+</div>
 <section class="section container" id="features">
-  <div class="section-head"><div class="eyebrow">POWERFUL FEATURES</div><h2>هەموو پێداویستییەکانی کارت لە یەک ئەپدا</h2><p>لە تۆمارکردنی کاتەوە تا هەژمارکردنی پارە و بینینی مێژووی کار، هەموو شتێک بە ڕێکخراوی لەبەردەستتە.</p></div>
-  <div class="features">
-    <article class="card"><div class="ico">⏱️</div><h3>دەستپێکردن و کۆتاییهێنانی کار</h3><p>کاتی دەستپێکردن و تەواوکردنی کارەکانت تۆمار بکە و ڕۆژەکانی کارت بە وردی بەڕێوە ببە.</p></article>
-    <article class="card"><div class="ico">📅</div><h3>مێژووی ڕۆژانەی کار</h3><p>هەموو ڕۆژەکانت لە شوێنێکی ڕێکخراودا ببینەوە و بە ئاسانی زانیارییەکانت بگەڕێنەوە.</p></article>
-    <article class="card"><div class="ico">💰</div><h3>مووچە و پارەدان</h3><p>داهات، پارەدانی وەرگیراو و کەمکردنەوەکانت تۆمار بکە و باڵانسی خۆت بزانە.</p></article>
-    <article class="card"><div class="ico">🧾</div><h3>دروستکردنی پسوڵە</h3><p>زانیارییەکانی پارەدان و مامەڵەکانت بە شێوەیەکی ڕوون و ڕێکخراو تۆمار بکە.</p></article>
-    <article class="card"><div class="ico">☕</div><h3>پشوودان و ئامادەبوون</h3><p>پشوودانەکان و دۆخی ئامادەبوونت بەدواداچوونیان بۆ بکە و ڕۆژەکەت باشتر ڕێک بخە.</p></article>
-    <article class="card"><div class="ico">📊</div><h3>ڕاپۆرت و هەژمارکردن</h3><p>کۆی ڕۆژانی کار، داهات و پارەی ماوە ببینە و وێنەیەکی ڕوون لە دۆخی کارەکەت هەبێت.</p></article>
-  </div>
+<div class="section-head">
+<div class="eyebrow">POWERFUL FEATURES</div>
+<h2>هەموو پێداویستییەکانی کارت لە یەک ئەپدا</h2>
+<p>لە تۆمارکردنی کاتەوە تا هەژمارکردنی پارە و بینینی مێژووی کار، هەموو شتێک بە ڕێکخراوی لەبەردەستتە.</p>
+</div>
+<div class="features">
+<article class="card"><div class="ico">⏱️</div><h3>دەستپێکردن و کۆتاییهێنانی کار</h3><p>کاتی دەستپێکردن و تەواوکردنی کارەکانت تۆمار بکە و ڕۆژەکانی کارت بە وردی بەڕێوە ببە.</p></article>
+<article class="card"><div class="ico">📅</div><h3>مێژووی ڕۆژانەی کار</h3><p>هەموو ڕۆژەکانت لە شوێنێکی ڕێکخراودا ببینەوە و بە ئاسانی زانیارییەکانت بگەڕێنەوە.</p></article>
+<article class="card"><div class="ico">💰</div><h3>مووچە و پارەدان</h3><p>داهات، پارەدانی وەرگیراو و کەمکردنەوەکانت تۆمار بکە و باڵانسی خۆت بزانە.</p></article>
+<article class="card"><div class="ico">🧾</div><h3>دروستکردنی پسوڵە</h3><p>زانیارییەکانی پارەدان و مامەڵەکانت بە شێوەیەکی ڕوون و ڕێکخراو تۆمار بکە.</p></article>
+<article class="card"><div class="ico">☕</div><h3>پشوودان و ئامادەبوون</h3><p>پشوودانەکان و دۆخی ئامادەبوونت بەدواداچوونیان بۆ بکە و ڕۆژەکەت باشتر ڕێک بخە.</p></article>
+<article class="card"><div class="ico">📊</div><h3>ڕاپۆرت و هەژمارکردن</h3><p>کۆی ڕۆژانی کار، داهات و پارەی ماوە ببینە و وێنەیەکی ڕوون لە دۆخی کارەکەت هەبێت.</p></article>
+</div>
 </section>
-
 <section class="section container" id="about">
-  <div class="section-head"><div class="eyebrow">MADE FOR YOUR WORKDAY</div><h2>کارەکانت بە ئاسانی کۆنترۆڵ بکە</h2><p>ڕووکارێکی پاک و مۆدێرن، بەشە جیاوازەکان و زانیارییە ڕێکخراوەکان یارمەتیت دەدەن بە کەمترین هەوڵ کارەکانت بەڕێوە ببەیت.</p></div>
-  <div class="showcase">
-    <article class="card"><div class="ico">🌙</div><h3>ڕووکارێکی شیک و ئارام</h3><p>دیزاینی تاریک بە وردەکارییە زێڕینییەکان، بۆ ئەزموونێکی مۆدێرن و ئاسوودە.</p></article>
-    <article class="card"><div class="ico">🌐</div><h3>زمانی گونجاو</h3><p>بەشەکانی ئەپەکە بە شێوەیەکی ڕوون ڕێکخراون بۆ بەکارهێنانێکی ئاسانتر.</p></article>
-    <article class="card"><div class="ico">🗂️</div><h3>هەموو زانیارییەکانت ڕێکخراو</h3><p>کار، پارەدان، پسوڵە و مێژوو بە شێوەیەکی جیاواز و ئاسان بگەڕێنەوە.</p></article>
-    <article class="card"><div class="ico">⚡</div><h3>خێرا و ئاسان</h3><p>بەشە گرنگەکانت بە ئاسانی بدۆزەرەوە و بێ ئاڵۆزی دەست بە کارەکانت بکە.</p></article>
-  </div>
+<div class="section-head">
+<div class="eyebrow">MADE FOR YOUR WORKDAY</div>
+<h2>کارەکانت بە ئاسانی کۆنترۆڵ بکە</h2>
+<p>ڕووکارێکی پاک و مۆدێرن، بەشە جیاوازەکان و زانیارییە ڕێکخراوەکان یارمەتیت دەدەن بە کەمترین هەوڵ کارەکانت بەڕێوە ببەیت.</p>
+</div>
+<div class="showcase">
+<article class="card"><div class="ico">🌙</div><h3>ڕووکارێکی شیک و ئارام</h3><p>دیزاینی تاریک بە وردەکارییە زێڕینییەکان، بۆ ئەزموونێکی مۆدێرن و ئاسوودە.</p></article>
+<article class="card"><div class="ico">🌐</div><h3>زمانی گونجاو</h3><p>بەشەکانی ئەپەکە بە شێوەیەکی ڕوون ڕێکخراون بۆ بەکارهێنانێکی ئاسانتر.</p></article>
+<article class="card"><div class="ico">🗂️</div><h3>هەموو زانیارییەکانت ڕێکخراو</h3><p>کار، پارەدان، پسوڵە و مێژوو بە شێوەیەکی جیاواز و ئاسان بگەڕێنەوە.</p></article>
+<article class="card"><div class="ico">⚡</div><h3>خێرا و ئاسان</h3><p>بەشە گرنگەکانت بە ئاسانی بدۆزەرەوە و بێ ئاڵۆزی دەست بە کارەکانت بکە.</p></article>
+</div>
 </section>
-
 <section class="section container">
-  <div class="section-head"><div class="eyebrow">GET STARTED</div><h2>بە سێ هەنگاو دەست پێ بکە</h2><p>دامەزراندنی ئەپەکە ئاسانە؛ تەنها ئەم هەنگاوانە جێبەجێ بکە.</p></div>
-  <div class="steps">
-    <article class="step"><h3>ئەپەکە دابگرە</h3><p>دوگمەی داگرتن دابگرە و چاوەڕێ بکە تا فایلەکە لە مۆبایلەکەت دابەزێت.</p></article>
-    <article class="step"><h3>دامەزراندن بکە</h3><p>فایلی APK بکەرەوە و ئەگەر مۆبایلەکەت داوای ڕێگەپێدان کرد، بە ئاگایی ڕێگە بدە.</p></article>
-    <article class="step"><h3>دەست بە کار بکە</h3><p>WORKDAY PRO بکەرەوە و زانیارییەکانی کارەکانت بەڕێکخراوی تۆمار بکە.</p></article>
-  </div>
+<div class="section-head">
+<div class="eyebrow">GET STARTED</div>
+<h2>بە سێ هەنگاو دەست پێ بکە</h2>
+<p>دامەزراندنی ئەپەکە ئاسانە؛ تەنها ئەم هەنگاوانە جێبەجێ بکە.</p>
+</div>
+<div class="steps">
+<article class="step"><h3>ئەپەکە دابگرە</h3><p>دوگمەی داگرتن دابگرە و چاوەڕێ بکە تا فایلەکە لە مۆبایلەکەت دابەزێت.</p></article>
+<article class="step"><h3>دامەزراندن بکە</h3><p>فایلی APK بکەرەوە و ئەگەر مۆبایلەکەت داوای ڕێگەپێدان کرد، بە ئاگایی ڕێگە بدە.</p></article>
+<article class="step"><h3>دەست بە کار بکە</h3><p>WORKDAY PRO بکەرەوە و زانیارییەکانی کارەکانت بەڕێکخراوی تۆمار بکە.</p></article>
+</div>
 </section>
-
+<section class="section container" id="iphone">
+<div class="section-head">
+<div class="eyebrow">IPHONE INSTALLATION GUIDE</div>
+<h2>چۆن WORKDAY PRO لە ئایفۆن دابنێیت؟</h2>
+<p>بە چوار هەنگاوی ئاسان وێبسایتەکە وەک ئەپێک لە شاشەی سەرەکی ئایفۆن زیاد بکە.</p>
+</div>
+<div class="iphone-guide">
+<article class="iphone-step">
+<h3>١. Safari بکەرەوە</h3>
+<div class="iphone-picture"><div>WORKDAY PRO</div><div style="background:#e2eaf5;padding:12px;border-radius:8px">🌐</div><small>Safari</small></div>
+<p>ئەم لینکە لە Safari بکەرەوە: <a href="https://anasali34.github.io/wordday-pro/" style="color:var(--gold)">WORKDAY PRO</a></p>
+</article>
+<article class="iphone-step">
+<h3>٢. Share دابگرە</h3>
+<div class="iphone-picture"><div>WORKDAY PRO</div><div style="font-size:35px;color:#0879ed">□↑</div><small>Share</small></div>
+<p>نیشانی هاوبەشکردن لە خوارەوەی Safari دابگرە.</p>
+</article>
+<article class="iphone-step">
+<h3>٣. Add to Home Screen</h3>
+<div class="iphone-picture"><div style="font-size:10px">Share Options</div><div class="blue">Add to Home Screen</div><small>+ Add</small></div>
+<p>لە لیستەکەدا Add to Home Screen هەڵبژێرە.</p>
+</article>
+<article class="iphone-step">
+<h3>٤. Add دابگرە</h3>
+<div class="iphone-picture"><div style="font-size:25px;color:#bd8734">WP</div><div class="blue">Add</div><small>WORKDAY PRO</small></div>
+<p>ئایکۆنی WORKDAY PRO لە شاشەی سەرەکی ئایفۆن دەردەکەوێت.</p>
+</article>
+</div>
+<div style="text-align:center;margin-top:28px">
+<a class="btn btn-gold" href="https://anasali34.github.io/wordday-pro/" target="_blank" rel="noopener"> کردنەوەی WORKDAY PRO بۆ iPhone</a>
+</div>
+<p class="micro" style="text-align:center">تێبینی: ئەمە وێب ئەپە؛ پێویست ناکات APK دابەزێنیت. لە Safari بکەرەوە و Add to Home Screen هەڵبژێرە.</p>
+</section>
 <section class="section container" id="download">
-  <div class="download-panel">
-    <div class="eyebrow">YOUR WORK. UNDER CONTROL.</div>
-    <h2>ئامادەیت کارەکانت باشتر ڕێک بخەیت؟</h2>
-    <p>ئێستا WORKDAY PRO دابگرە و بە شێوەیەکی زیرەکانە دەست بە بەڕێوەبردنی ڕۆژانی کارت بکە.</p>
-    <a class="btn btn-gold" href="https://drive.google.com/uc?export=download&id=1HJOIlBxO1oEp4ENMBvopH1MQwHSvHMPo">⬇ داگرتنی WORKDAY PRO</a>
-    <div class="micro">Android APK • Google Drive</div>
-  </div>
+<div class="download-panel">
+<div class="eyebrow">YOUR WORK. UNDER CONTROL.</div>
+<h2>ئامادەیت کارەکانت باشتر ڕێک بخەیت؟</h2>
+<p>ئێستا WORKDAY PRO دابگرە و بە شێوەیەکی زیرەکانە دەست بە بەڕێوەبردنی ڕۆژانی کارت بکە.</p>
+<a class="btn btn-gold" href="https://drive.google.com/uc?export=download&id=1HJOIlBxO1oEp4ENMBvopH1MQwHSvHMPo">⬇ داگرتنی WORKDAY PRO بۆ Android</a>
+<br>
+<a class="btn btn-outline" href="https://anasali34.github.io/wordday-pro/" target="_blank" rel="noopener"> کردنەوەی WORKDAY PRO بۆ iPhone</a>
+<div class="micro">Android APK • iPhone Safari Web App</div>
+</div>
 </section>
 </main>
-<footer><div class="container footerin"><a class="brand" href="#"><span class="logo">WP</span><span>WORKDAY PRO<small>WORK SMARTER EVERY DAY</small></span></a><span>© 2026 WORKDAY PRO — هەموو مافەکان پارێزراون</span></div></footer>
+<footer>
+<div class="container footerin">
+<a class="brand" href="#"><span class="logo">WP</span><span>WORKDAY PRO<small>WORK SMARTER EVERY DAY</small></span></a>
+<span>© 2026 WORKDAY PRO — هەموو مافەکان پارێزراون</span>
+</div>
+</footer>
 </body>
 </html>
